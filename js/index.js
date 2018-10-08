@@ -20,14 +20,21 @@ document.querySelectorAll('.digits, .subtract, .add, .multiply, .divide')
     
     function clear() {
         const display = document.querySelector('.display');
-        display.value -= eval(display.value)
+        display.value = null;
     }
      
-//      document.querySelector('.Math.sqrt')
-//      addEventListener('click', math.sqrt);
+     document.querySelectorAll('.sqrt')
+     .forEach (el => el.addEventListener ('click', sqrt))
      
-//   function math.sqrt() {
-//   const display = document.querySelector('.display');
-//   display.value = Math.sqrt(display.value)
-// }
+  function sqrt(e) {
+  const display = document.querySelector('.display')
+  display.value = Math.sqrt(eval(display.value))
+}
 
+// document.querySelector('.pow')
+// .forEach( el => el.addEventListener ('click', pow))
+
+// function pow(e) {
+//     const display = document.querySelector('.display')
+//     display.value = Math.pow(eval(display.value, 2))
+// }
